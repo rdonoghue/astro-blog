@@ -1,21 +1,10 @@
 ---
-const pageTitle = "My Astro Learning Blog";
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Home Page";
 ---
+<BaseLayout pageTitle={pageTitle}>
+  <h2>My awesome blog subtitle - WHERE AM I </h2>
+<p>You shouldn't be here.  This is just me following one of the Astro tutorials.</p>
+<p>I guess content is just kind of generally going in here?</p>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		        <a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
-		<h1>{pageTitle}</h1>
-		<p>You shouldn't be here.  This is just me following one of the Astro tutorials.</p>
-	</body>
-</html>
+</BaseLayout>

@@ -1,4 +1,6 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
+
 title: "My First Blog Post"
 pubDate: 2025-06-22
 description: "This is the first post of my new Astro blog."
@@ -9,18 +11,12 @@ image:
 tags: ["astro", "blogging", "learning in public"]
 ---
 
-# My Notes
+## My Notes
 
 - Ok, I just pasted in a bunch of stuff, and I'm looking to parse it
 - Looks like this tutorial is from 2022, and it's probably a good sign that it still works
 - Not clear what that image is going to be, though I wager it's maybe a blog preview?
 - I'm curious about the naming convention and how much it's strictly necessary
-
-# My First Blog Post
-
-Published on: 2025-06-25
-
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
 ## What I've accomplished
 

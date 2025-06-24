@@ -1,27 +1,20 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+const pageTitle = "Blog Page";
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+
 
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-                <a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
-		<h1>Blog Page</h1>
+<BaseLayout pageTitle={pageTitle}>
 		<p>Ok, in theory the blog goes here.  I'm not yet clear what that will actually look like, but I'm game to follow the tutorial.</p>
 
-        <p>Ok, actualy blog posts, albeit in a very manual fashion</p>
+        <p>Ok, actualy blog posts, albeit in a less manual fashion</p>
             <ul>
-      <li><a href="/posts/post-1/">Post 1</a></li>
-        <li><a href="/posts/post-2/">Post 2</a></li>
-      <li><a href="/posts/post-3/">Post 3</a></li>
+    <!-- {allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)} -->
+  {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+
     </ul>
-	</body>
-</html>
+</BaseLayout>
+
+
