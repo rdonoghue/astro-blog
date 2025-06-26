@@ -1,9 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting';
+
 const pageTitle = "Home Page";
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome blog subtitle - WHERE AM I </h2>
+  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+
 <p>You shouldn't be here.  This is just me following one of the Astro tutorials.</p>
 <p>I guess content is just kind of generally going in here?</p>
 
